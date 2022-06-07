@@ -1,11 +1,10 @@
-<template><img v-bind="allProps" /></template>
+<template><img class="class" :src="src" /></template>
 
 <script lang="ts" setup>
 type Props = {
   src: string;
+  class: string;
 };
 
 const props = defineProps<Props>();
-
-const allProps: any = props;
 </script>

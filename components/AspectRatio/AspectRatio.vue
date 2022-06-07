@@ -1,37 +1,42 @@
 <script lang="ts" setup>
 type PropsType = {
   ratio: string;
-  className: string;
+  class: string;
 };
 
 defineProps<PropsType>();
+
+const slots = useSlots();
+
+console.log(slots.default);
 </script>
 
 <template>
   <div
-    class="app-aspect-ratio overflow-hidden bg-slate-600"
-    :class="className"
+    class="app-aspect-ratio overflow-hidden"
+    :class="class"
     :style="{ aspectRatio: ratio }"
   >
-    <slot>aspect ratio component</slot>
+    <slot></slot>
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style scoped>
 .app-aspect-ratio {
   position: relative;
+}
 
-  > :not(style) {
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    inset: 0px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  > img {
-    object-fit: cover;
-  }
+.app-aspect-ratio > ::v-deep(img) {
+  object-fit: cover;
+}
+
+.app-aspect-ratio > :not(style) {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  inset: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>

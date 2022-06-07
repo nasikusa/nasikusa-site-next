@@ -1,6 +1,12 @@
+<script lang="ts" setup>
+defineProps({
+  type: String,
+});
+</script>
+
 <template>
   <div
-    class="max-w-xs rounded-md bg-slate-400 p-2 text-white"
+    class="bg-orange-700 w-48 rounded-md p-2 text-white flex justify-center items-center hover:bg-orange-600 hover:cursor-pointer"
     :class="{
       hoge: type === 'primary',
     }"
@@ -8,12 +14,6 @@
     <slot>button text</slot>
   </div>
 </template>
-
-<script lang="ts" setup>
-defineProps({
-  type: String,
-});
-</script>
 
 <style scoped>
 .hoge {
