@@ -7,7 +7,11 @@ export default defineNuxtConfig({
   },
   ssr: false,
   // buildModules: ["@nuxtjs/tailwindcss"],
-  css: ["@/assets/css/tailwind.css", "@/assets/css/global.css"], // <= ドキュメントからさらに追加
+  css: [
+    "@/assets/css/reset.css",
+    "@/assets/css/tailwind.css",
+    "@/assets/css/global.css",
+  ], // <= ドキュメントからさらに追加
   build: {
     postcss: {
       postcssOptions: require("./postcss.config.js"),
