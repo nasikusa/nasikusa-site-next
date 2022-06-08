@@ -1,3 +1,13 @@
+<script setup lang="ts">
+import Image from "@/components/Image";
+
+const props = defineProps({
+  title: String,
+  type: String,
+  id: Number,
+});
+</script>
+
 <template>
   <div>
     <div>
@@ -8,13 +18,3 @@
     </div>
   </div>
 </template>
-
-<script>
-import Image from "@/components/Image";
-
-const props = defineProps({
-  title: String,
-  type: String,
-  id: Number,
-});
-</script>

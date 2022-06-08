@@ -19,7 +19,10 @@ const classes = computed(() => {
 </script>
 
 <template>
-  <hr class="border-0 border-solid border-inherit" :class="classes" />
+  <hr
+    class="app-divider border-0 border-solid border-inherit"
+    :class="classes"
+  />
 </template>
 
 <style scoped>

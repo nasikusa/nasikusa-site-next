@@ -6,7 +6,7 @@ defineProps({
 
 <template>
   <div
-    class="bg-orange-700 w-48 rounded-md p-2 text-white flex justify-center items-center hover:bg-orange-600 hover:cursor-pointer"
+    class="app-button bg-orange-700 w-48 rounded-md p-2 text-white flex justify-center items-center hover:bg-orange-600 hover:cursor-pointer"
     :class="{
       hoge: type === 'primary',
     }"
