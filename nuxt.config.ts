@@ -5,6 +5,7 @@ export default defineNuxtConfig({
   nitro: {
     preset: "node",
   },
+  components: false,
   ssr: false,
   // buildModules: ["@nuxtjs/tailwindcss"],
   css: [
