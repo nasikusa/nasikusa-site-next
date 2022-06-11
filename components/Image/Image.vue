@@ -7,4 +7,12 @@ type Props = {
 const props = defineProps<Props>();
 </script>
 
-<template><img class="app-image" :class="class" :src="src" /></template>
+<script lang="ts">
+export default {
+  inheritAttrs: true,
+};
+</script>
+
+<template>
+  <img class="app-image" v-bind="props" v-on="$listeners" />
+</template>
